@@ -1,7 +1,8 @@
 #pragma once
-#include <SFML/Graphics.hpp>
+#include "Window.h"
+#include "Updatable.h"
 
-class App
+class App : public Updatable
 {
 public:
 	App();
@@ -12,6 +13,6 @@ private:
 	void update();
 	void render();
 
-	sf::RenderWindow window;
+	Window window;
 };
 
