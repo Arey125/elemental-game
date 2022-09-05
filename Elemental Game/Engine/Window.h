@@ -11,7 +11,10 @@ public:
 	bool isOpen();
 	bool pollEvent(sf::Event& e);
 
-	friend class App;
+	void display();
+
+	friend class Renderable;
+
 private:
 	static sf::RenderWindow* renderWindow;
 };

@@ -1,7 +1,7 @@
 #include "App.h"
 
-App::App()
-	: window()
+App::App(Window& window)
+    : window(window)
 {
 
 }
@@ -29,7 +29,8 @@ void App::render()
     sf::CircleShape shape(100, 100);
     shape.setPosition(200, 200);
 
-    Window::renderWindow->clear();
-    Window::renderWindow->draw(shape);
-    Window::renderWindow->display();
+    renderTarget.clear();
+    renderTarget.draw(shape);
+
+    window.display();
 }

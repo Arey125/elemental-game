@@ -1,9 +1,10 @@
 #include <iostream>
 #include <SFML/Graphics.hpp>
-#include "App.h"
+#include "Engine/App.h"
 
 int main()
 {
-	App app;
+	Window window;
+	App app(window);
 	app.run();
 }

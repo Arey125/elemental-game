@@ -1,11 +1,14 @@
 #pragma once
 #include "Window.h"
 #include "Updatable.h"
+#include "Renderable.h"
 
-class App : public Updatable
+class App :
+	public Updatable,
+	public Renderable
 {
 public:
-	App();
+	App(Window& window);
 	void run();
 
 private:
@@ -13,6 +16,6 @@ private:
 	void update();
 	void render();
 
-	Window window;
+	Window& window;
 };
 

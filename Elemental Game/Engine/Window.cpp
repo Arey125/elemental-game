@@ -19,3 +19,8 @@ bool Window::pollEvent(sf::Event& e)
 		renderWindow->close();
 	return result;
 }
+
+void Window::display()
+{
+	renderWindow->display();
+}

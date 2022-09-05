@@ -88,17 +88,19 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="App.cpp" />
-    <ClCompile Include="DeltaTimeManager.cpp" />
+    <ClCompile Include="Engine\App.cpp" />
+    <ClCompile Include="Engine\DeltaTimeManager.cpp" />
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="Updatable.cpp" />
-    <ClCompile Include="Window.cpp" />
+    <ClCompile Include="Engine\Renderable.cpp" />
+    <ClCompile Include="Engine\Updatable.cpp" />
+    <ClCompile Include="Engine\Window.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="App.h" />
-    <ClInclude Include="DeltaTimeManager.h" />
-    <ClInclude Include="Updatable.h" />
-    <ClInclude Include="Window.h" />
+    <ClInclude Include="Engine\App.h" />
+    <ClInclude Include="Engine\DeltaTimeManager.h" />
+    <ClInclude Include="Engine\Renderable.h" />
+    <ClInclude Include="Engine\Updatable.h" />
+    <ClInclude Include="Engine\Window.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
