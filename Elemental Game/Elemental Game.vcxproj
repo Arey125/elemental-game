@@ -90,10 +90,13 @@
   <ItemGroup>
     <ClCompile Include="Engine\App.cpp" />
     <ClCompile Include="Engine\DeltaTimeManager.cpp" />
+    <ClCompile Include="Engine\Layer.cpp" />
+    <ClCompile Include="Engine\LayerStack.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Engine\Renderable.cpp" />
     <ClCompile Include="Engine\Updatable.cpp" />
     <ClCompile Include="Engine\Window.cpp" />
+    <ClCompile Include="MainMenuLayer.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Engine\App.h" />
@@ -101,6 +104,9 @@
     <ClInclude Include="Engine\Renderable.h" />
     <ClInclude Include="Engine\Updatable.h" />
     <ClInclude Include="Engine\Window.h" />
+    <ClInclude Include="Engine\Layer.h" />
+    <ClInclude Include="Engine\LayerStack.h" />
+    <ClInclude Include="MainMenuLayer.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

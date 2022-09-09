@@ -2,6 +2,7 @@
 #include "Window.h"
 #include "Updatable.h"
 #include "Renderable.h"
+#include "LayerStack.h"
 
 class App :
 	public Updatable,
@@ -17,5 +18,6 @@ private:
 	void render();
 
 	Window& window;
+	LayerStack layerStack;
 };
 
