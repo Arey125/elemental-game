@@ -14,6 +14,7 @@ private:
 	DeltaTimeManager();
 
 	sf::Clock clock;
+	sf::Time dTime;
 	float dt;
 };
 

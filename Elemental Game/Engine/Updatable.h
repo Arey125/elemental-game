@@ -12,5 +12,6 @@ public:
 
 protected:
 	float& dt;
+	sf::Time dTime;
 };
 

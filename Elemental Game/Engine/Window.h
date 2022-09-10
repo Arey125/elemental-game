@@ -4,7 +4,7 @@
 
 class Window
 {
-
+	friend class App;
 public:
 	Window();
 

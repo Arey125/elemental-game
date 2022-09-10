@@ -58,7 +58,7 @@
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;SFML_STATIC;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpp17</LanguageStandard>
-      <AdditionalIncludeDirectories>C:\SFML\x64\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir);C:\SFML\x64\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -76,7 +76,7 @@
       <PreprocessorDefinitions>NDEBUG;_CONSOLE;SFML_STATIC;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpp17</LanguageStandard>
-      <AdditionalIncludeDirectories>C:\SFML\x64\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\ImGui;C:\SFML\x64\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -92,11 +92,18 @@
     <ClCompile Include="Engine\DeltaTimeManager.cpp" />
     <ClCompile Include="Engine\Layer.cpp" />
     <ClCompile Include="Engine\LayerStack.cpp" />
-    <ClCompile Include="main.cpp" />
     <ClCompile Include="Engine\Renderable.cpp" />
     <ClCompile Include="Engine\Updatable.cpp" />
     <ClCompile Include="Engine\Window.cpp" />
-    <ClCompile Include="MainMenuLayer.cpp" />
+    <ClCompile Include="Layers\GameLayer.cpp" />
+    <ClCompile Include="ImGUI\imgui-SFML.cpp" />
+    <ClCompile Include="ImGUI\imgui.cpp" />
+    <ClCompile Include="ImGUI\imgui_demo.cpp" />
+    <ClCompile Include="ImGUI\imgui_draw.cpp" />
+    <ClCompile Include="ImGUI\imgui_tables.cpp" />
+    <ClCompile Include="ImGUI\imgui_widgets.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="Layers\MainMenuLayer.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Engine\App.h" />
@@ -106,7 +113,32 @@
     <ClInclude Include="Engine\Window.h" />
     <ClInclude Include="Engine\Layer.h" />
     <ClInclude Include="Engine\LayerStack.h" />
-    <ClInclude Include="MainMenuLayer.h" />
+    <ClInclude Include="Layers\GameLayer.h" />
+    <ClInclude Include="ImGUI\imconfig-SFML.h" />
+    <ClInclude Include="ImGUI\imconfig.h" />
+    <ClInclude Include="ImGUI\imgui-SFML.h" />
+    <ClInclude Include="ImGUI\imgui-SFML_export.h" />
+    <ClInclude Include="ImGUI\imgui.h" />
+    <ClInclude Include="ImGUI\imgui_internal.h" />
+    <ClInclude Include="ImGUI\imstb_rectpack.h" />
+    <ClInclude Include="ImGUI\imstb_textedit.h" />
+    <ClInclude Include="ImGUI\imstb_truetype.h" />
+    <ClInclude Include="Layers\MainMenuLayer.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="imgui.ini" />
+    <None Include="ImGUI\.appveyor.yml" />
+    <None Include="ImGUI\.clang-format" />
+    <None Include="ImGUI\.editorconfig" />
+    <None Include="ImGUI\.gitattributes" />
+    <None Include="ImGUI\.gitignore" />
+    <None Include="ImGUI\.travis.yml" />
+    <None Include="ImGUI\LICENSE" />
+    <None Include="ImGUI\README.md" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="ImGUI\CMakeLists.txt" />
+    <Text Include="ImGUI\LICENSE.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

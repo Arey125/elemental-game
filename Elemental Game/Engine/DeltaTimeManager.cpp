@@ -10,12 +10,12 @@ DeltaTimeManager& DeltaTimeManager::instance()
 
 void DeltaTimeManager::updateDeltaTime()
 {
-	dt = clock.getElapsedTime().asSeconds();
-	clock.restart();
+	dTime = clock.restart();
+	dt = dTime.asSeconds();
 }
 
 DeltaTimeManager::DeltaTimeManager()
-	:dt(0.01)
+	:dTime(sf::milliseconds(10)), dt(dTime.asSeconds())
 {
 	clock.restart();
 }

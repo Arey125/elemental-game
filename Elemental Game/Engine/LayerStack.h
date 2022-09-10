@@ -24,5 +24,6 @@ public:
 private:
 	std::vector<Layer*> layers;
 	std::vector<Layer*> pushQueue;
+	std::vector<Layer*> removeQueue;
 };
 

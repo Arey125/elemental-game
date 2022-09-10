@@ -1,11 +1,11 @@
 #pragma once
-#include "Engine/Layer.h"
+#include <Engine/Layer.h>
 
-class MainMenuLayer:
-	public Layer
+class GameLayer :
+    public Layer
 {
 public:
-	MainMenuLayer(LayerStack& layer_stack);
+	GameLayer(LayerStack& layer_stack);
 
 	virtual void onEvent(sf::Event event);
 	virtual bool blockLower();
@@ -14,6 +14,6 @@ public:
 	virtual void render();
 
 private:
-	sf::Color bgColor;
+	sf::RectangleShape rect;
 };
 

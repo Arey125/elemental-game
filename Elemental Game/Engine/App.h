@@ -10,6 +10,7 @@ class App :
 {
 public:
 	App(Window& window);
+	~App();
 	void run();
 
 private:

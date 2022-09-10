@@ -13,19 +13,24 @@ void LayerStack::pushLayer(Layer* layer)
 
 void LayerStack::removeLayer(Layer* layer)
 {
-	auto position = std::find(layers.begin(), layers.end(), layer);
-	if (position == layers.end())
-		return;
-	delete (*position);
-	layers.erase(position);
+	removeQueue.push_back(layer);
 }
 
 void LayerStack::update()
 {
+	for (auto layer : removeQueue)
+	{
+		auto position = std::find(layers.begin(), layers.end(), layer);
+		if (position == layers.end())
+			return;
+		delete (*position);
+		layers.erase(position);
+	}
 	for (auto layer : pushQueue)
 		layers.push_back(layer);
 
 	pushQueue.clear();
+	removeQueue.clear();
 
 	for (auto it = layers.rbegin(); it != layers.rend(); it++)
 	{
