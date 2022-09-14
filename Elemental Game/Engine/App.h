@@ -2,7 +2,7 @@
 #include "Window.h"
 #include "Updatable.h"
 #include "Renderable.h"
-#include "LayerStack.h"
+#include "Layer.h"
 
 class App :
 	public Updatable,

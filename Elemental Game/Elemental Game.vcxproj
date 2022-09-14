@@ -89,12 +89,16 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Engine\App.cpp" />
-    <ClCompile Include="Engine\DeltaTimeManager.cpp" />
-    <ClCompile Include="Engine\Layer.cpp" />
-    <ClCompile Include="Engine\LayerStack.cpp" />
+    <ClCompile Include="Engine\Entity\Components\AnimationComponent\AnimationComponent.cpp" />
+    <ClCompile Include="Engine\Entity\Components\ControllerComponent\ControllerComponent.cpp" />
+    <ClCompile Include="Engine\Entity\Components\PhysicsComponent\PhysicsComponent.cpp" />
+    <ClCompile Include="Engine\Updatable\DeltaTimeManager.cpp" />
+    <ClCompile Include="Engine\Layer\Layer.cpp" />
+    <ClCompile Include="Engine\Layer\LayerStack.cpp" />
     <ClCompile Include="Engine\Renderable.cpp" />
-    <ClCompile Include="Engine\Updatable.cpp" />
+    <ClCompile Include="Engine\Updatable\Updatable.cpp" />
     <ClCompile Include="Engine\Window.cpp" />
+    <ClCompile Include="Engine\Entity\Entity.cpp" />
     <ClCompile Include="Layers\GameLayer.cpp" />
     <ClCompile Include="ImGUI\imgui-SFML.cpp" />
     <ClCompile Include="ImGUI\imgui.cpp" />
@@ -107,12 +111,21 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Engine\App.h" />
-    <ClInclude Include="Engine\DeltaTimeManager.h" />
-    <ClInclude Include="Engine\Renderable.h" />
-    <ClInclude Include="Engine\Updatable.h" />
-    <ClInclude Include="Engine\Window.h" />
+    <ClInclude Include="Engine\Entity.h" />
+    <ClInclude Include="Engine\Entity\Components.h" />
+    <ClInclude Include="Engine\Entity\Components\AnimationComponent\AnimationComponent.h" />
+    <ClInclude Include="Engine\Entity\Components\Component.h" />
+    <ClInclude Include="Engine\Entity\Components\ControllerComponent\ControllerComponent.h" />
+    <ClInclude Include="Engine\Entity\Components\PhysicsComponent\PhysicsComponent.h" />
     <ClInclude Include="Engine\Layer.h" />
-    <ClInclude Include="Engine\LayerStack.h" />
+    <ClInclude Include="Engine\Updatable.h" />
+    <ClInclude Include="Engine\Updatable\DeltaTimeManager.h" />
+    <ClInclude Include="Engine\Renderable.h" />
+    <ClInclude Include="Engine\Updatable\Updatable.h" />
+    <ClInclude Include="Engine\Window.h" />
+    <ClInclude Include="Engine\Layer\Layer.h" />
+    <ClInclude Include="Engine\Layer\LayerStack.h" />
+    <ClInclude Include="Engine\Entity\Entity.h" />
     <ClInclude Include="Layers\GameLayer.h" />
     <ClInclude Include="ImGUI\imconfig-SFML.h" />
     <ClInclude Include="ImGUI\imconfig.h" />

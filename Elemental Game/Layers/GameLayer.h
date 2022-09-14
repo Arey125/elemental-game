@@ -1,5 +1,6 @@
 #pragma once
 #include <Engine/Layer.h>
+#include <Engine/Entity.h>
 
 class GameLayer :
     public Layer
@@ -14,6 +15,6 @@ public:
 	virtual void render();
 
 private:
-	sf::RectangleShape rect;
+	Entity entity;
 };
 

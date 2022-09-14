@@ -3,7 +3,6 @@
 
 #include "App.h"
 #include "Layers/MainMenuLayer.h"
-#include "DeltaTimeManager.h"
 
 App::App(Window& window)
     : window(window)
