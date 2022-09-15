@@ -1,10 +1,21 @@
 #include "Entity.h"
 
 Entity::Entity():
-	animationComponent(new AnimationComponent(*this)),
-	physicsComponent(new PhysicsComponent(*this)),
-	controllerComponent(new ControllerComponent(*this))
+	animationComponent(nullptr),
+	physicsComponent(nullptr),
+	controllerComponent(nullptr)
 {
+
+}
+
+Entity::~Entity()
+{
+	if (animationComponent)
+		delete animationComponent;
+	if (physicsComponent)
+		delete physicsComponent;
+	if (controllerComponent)
+		delete controllerComponent;
 }
 
 void Entity::update()

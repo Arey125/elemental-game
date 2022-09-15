@@ -99,6 +99,9 @@
     <ClCompile Include="Engine\Updatable\Updatable.cpp" />
     <ClCompile Include="Engine\Window.cpp" />
     <ClCompile Include="Engine\Entity\Entity.cpp" />
+    <ClCompile Include="Entity\Components\AnimationComponents\PlayerAnimationComponent.cpp" />
+    <ClCompile Include="Entity\Components\ControllerComponents\InputControllerComponent.cpp" />
+    <ClCompile Include="Entity\Player.cpp" />
     <ClCompile Include="Layers\GameLayer.cpp" />
     <ClCompile Include="ImGUI\imgui-SFML.cpp" />
     <ClCompile Include="ImGUI\imgui.cpp" />
@@ -126,6 +129,10 @@
     <ClInclude Include="Engine\Layer\Layer.h" />
     <ClInclude Include="Engine\Layer\LayerStack.h" />
     <ClInclude Include="Engine\Entity\Entity.h" />
+    <ClInclude Include="Entity\Components.h" />
+    <ClInclude Include="Entity\Components\AnimationComponents\PlayerAnimationComponent.h" />
+    <ClInclude Include="Entity\Components\ControllerComponents\InputControllerComponent.h" />
+    <ClInclude Include="Entity\Player.h" />
     <ClInclude Include="Layers\GameLayer.h" />
     <ClInclude Include="ImGUI\imconfig-SFML.h" />
     <ClInclude Include="ImGUI\imconfig.h" />

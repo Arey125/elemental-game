@@ -7,6 +7,7 @@ class GameLayer :
 {
 public:
 	GameLayer(LayerStack& layer_stack);
+	~GameLayer();
 
 	virtual void onEvent(sf::Event event);
 	virtual bool blockLower();
@@ -15,6 +16,6 @@ public:
 	virtual void render();
 
 private:
-	Entity entity;
+	Entity* entity;
 };
 
