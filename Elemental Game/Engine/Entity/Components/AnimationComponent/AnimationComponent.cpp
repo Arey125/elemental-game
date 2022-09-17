@@ -5,12 +5,3 @@ AnimationComponent::AnimationComponent(Entity& entity)
 	: Component(entity)
 {
 }
-
-void AnimationComponent::render()
-{
-
-}
-
-void AnimationComponent::update()
-{
-}

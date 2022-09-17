@@ -7,4 +7,8 @@ public:
 	PlayerAnimationComponent(Entity& entity);
 
 	virtual void render();
+	virtual void setState(int state) override;
+
+private:
+	int state;
 };

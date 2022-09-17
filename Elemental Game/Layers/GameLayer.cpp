@@ -2,8 +2,10 @@
 #include "Entity/Player.h"
 
 GameLayer::GameLayer(LayerStack& layer_stack)
-	: Layer(layerStack), entity(new Player())
+	: Layer(layerStack), entity(new Player()),
+	rect({ 50, 50 })
 {
+	rect.setPosition({ 300, 300 });
 }
 
 GameLayer::~GameLayer()
@@ -22,10 +24,15 @@ bool GameLayer::blockLower()
 
 void GameLayer::update()
 {
-	entity->update();
+	entity->getControllerComponent()->update();
+	auto box = entity->getPhysicsComponent()->getMovedBoundingBox();
+	if (box.intersects(rect.getGlobalBounds()))
+		entity->getPhysicsComponent()->onCollision(rect.getGlobalBounds());
+	entity->getPhysicsComponent()->update();
 }
 
 void GameLayer::render()
 {
+	renderTarget.draw(rect);
 	entity->render();
 }

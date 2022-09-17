@@ -11,7 +11,7 @@ class AnimationComponent:
 public:
 	AnimationComponent(Entity& entity);
 
-	virtual void render();
-	virtual void update();
-
+	virtual void render() {};
+	virtual void update() {};
+	virtual void setState(int state) {};
 };

@@ -5,5 +5,5 @@ Player::Player()
 {
 	controllerComponent = new InputControllerComponent(*this);
 	animationComponent = new PlayerAnimationComponent(*this);
-	physicsComponent = new PhysicsComponent(*this);
+	physicsComponent = new PlayerPhysicsComponent(*this);
 }

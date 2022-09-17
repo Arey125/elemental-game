@@ -17,5 +17,6 @@ public:
 
 private:
 	Entity* entity;
+	sf::RectangleShape rect;
 };
 
