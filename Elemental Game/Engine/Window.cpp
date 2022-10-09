@@ -2,9 +2,10 @@
 
 sf::RenderWindow* Window::renderWindow = nullptr;
 
-Window::Window()
+Window::Window() :
+	m_renderWindow(sf::VideoMode(800, 600), "My window")
 {
-	renderWindow = new sf::RenderWindow(sf::VideoMode(800, 600), "My window");
+	renderWindow = &m_renderWindow;
 }
 
 bool Window::isOpen()
@@ -14,10 +15,11 @@ bool Window::isOpen()
 
 bool Window::pollEvent(sf::Event& e)
 {
-	bool result = renderWindow->pollEvent(e);
+	if (!renderWindow->pollEvent(e))
+		return false;
 	if (e.type == sf::Event::Closed)
 		renderWindow->close();
-	return result;
+	return true;
 }
 
 void Window::display()

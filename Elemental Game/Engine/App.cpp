@@ -42,7 +42,7 @@ void App::update()
 
 void App::render()
 {
-    renderTarget.clear();
+    renderTarget.clear(sf::Color(11, 13, 28));
     layerStack.render();
     ImGui::SFML::Render(*window.renderWindow);
     window.display();

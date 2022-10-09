@@ -4,7 +4,7 @@ PlayerPhysicsComponent::PlayerPhysicsComponent(Entity& entity)
 	: PhysicsComponent(entity)
 {
 	position = { 100, 100 };
-	boxSizes = { 50, 50 };
+	boxSizes = { 16, 16 };
 	velocity = { 0, 0 };
 }
 

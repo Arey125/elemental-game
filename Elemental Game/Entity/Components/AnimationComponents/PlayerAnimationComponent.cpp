@@ -7,7 +7,7 @@ PlayerAnimationComponent::PlayerAnimationComponent(Entity& entity)
 
 void PlayerAnimationComponent::render()
 {
-	sf::RectangleShape rect({ 50, 50 });
+	sf::RectangleShape rect({ 16, 16 });
 	auto position = entity.getPhysicsComponent()->getPosition();
 	rect.setPosition(position);
 	if (state)

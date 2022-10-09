@@ -17,5 +17,6 @@ public:
 
 private:
 	static sf::RenderWindow* renderWindow;
+	sf::RenderWindow m_renderWindow;
 };
 

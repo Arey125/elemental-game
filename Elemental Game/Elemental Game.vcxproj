@@ -76,7 +76,7 @@
       <PreprocessorDefinitions>NDEBUG;_CONSOLE;SFML_STATIC;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpp17</LanguageStandard>
-      <AdditionalIncludeDirectories>C:\ImGui;C:\SFML\x64\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir);C:\SFML\x64\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -92,6 +92,8 @@
     <ClCompile Include="Engine\Entity\Components\AnimationComponent\AnimationComponent.cpp" />
     <ClCompile Include="Engine\Entity\Components\ControllerComponent\ControllerComponent.cpp" />
     <ClCompile Include="Engine\Entity\Components\PhysicsComponent\PhysicsComponent.cpp" />
+    <ClCompile Include="Engine\TileMap\Chunk.cpp" />
+    <ClCompile Include="Engine\TileMap\Tilemap.cpp" />
     <ClCompile Include="Engine\Updatable\DeltaTimeManager.cpp" />
     <ClCompile Include="Engine\Layer\Layer.cpp" />
     <ClCompile Include="Engine\Layer\LayerStack.cpp" />
@@ -122,6 +124,8 @@
     <ClInclude Include="Engine\Entity\Components\ControllerComponent\ControllerComponent.h" />
     <ClInclude Include="Engine\Entity\Components\PhysicsComponent\PhysicsComponent.h" />
     <ClInclude Include="Engine\Layer.h" />
+    <ClInclude Include="Engine\TileMap\Chunk.h" />
+    <ClInclude Include="Engine\TileMap\Tilemap.h" />
     <ClInclude Include="Engine\Updatable.h" />
     <ClInclude Include="Engine\Updatable\DeltaTimeManager.h" />
     <ClInclude Include="Engine\Renderable.h" />
@@ -148,7 +152,6 @@
     <ClInclude Include="Layers\MainMenuLayer.h" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="imgui.ini" />
     <None Include="ImGUI\.appveyor.yml" />
     <None Include="ImGUI\.clang-format" />
     <None Include="ImGUI\.editorconfig" />

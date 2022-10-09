@@ -13,7 +13,5 @@ public:
 	virtual void update();
 	virtual void render();
 
-private:
-	sf::Color bgColor;
 };
 

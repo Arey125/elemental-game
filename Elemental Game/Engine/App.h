@@ -16,6 +16,7 @@ public:
 private:
 
 	void update();
+	void updateInput();
 	void render();
 
 	Window& window;

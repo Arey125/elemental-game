@@ -1,6 +1,7 @@
 #pragma once
 #include <Engine/Layer.h>
 #include <Engine/Entity.h>
+#include <Engine/TileMap/Tilemap.h>
 
 class GameLayer :
     public Layer
@@ -16,7 +17,8 @@ public:
 	virtual void render();
 
 private:
-	Entity* entity;
+	Entity* player;
 	sf::RectangleShape rect;
+	Tilemap tilemap;
 };
 

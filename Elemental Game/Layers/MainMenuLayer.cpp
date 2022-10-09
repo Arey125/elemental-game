@@ -5,7 +5,7 @@
 #include "GameLayer.h"
 
 MainMenuLayer::MainMenuLayer(LayerStack& layer_stack)
-	: Layer(layer_stack), bgColor(sf::Color::Black)
+	: Layer(layer_stack)
 {
 
 }
@@ -36,5 +36,4 @@ void MainMenuLayer::update()
 
 void MainMenuLayer::render()
 {
-	renderTarget.clear(bgColor);
 }

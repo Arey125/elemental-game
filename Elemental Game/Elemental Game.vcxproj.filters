@@ -87,6 +87,12 @@
     <ClCompile Include="Entity\Components\PhysicsComponents\PlayerPhysicsComponent.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
+    <ClCompile Include="Engine\TileMap\Chunk.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
+    <ClCompile Include="Engine\TileMap\Tilemap.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Engine\App.h">
@@ -185,6 +191,12 @@
     <ClInclude Include="Entity\Components\PhysicsComponents\PlayerPhysicsComponent.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
+    <ClInclude Include="Engine\TileMap\Tilemap.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+    <ClInclude Include="Engine\TileMap\Chunk.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="ImGUI\.appveyor.yml" />
@@ -195,7 +207,6 @@
     <None Include="ImGUI\.travis.yml" />
     <None Include="ImGUI\LICENSE" />
     <None Include="ImGUI\README.md" />
-    <None Include="imgui.ini" />
   </ItemGroup>
   <ItemGroup>
     <Text Include="ImGUI\CMakeLists.txt" />
